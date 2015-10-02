@@ -45,6 +45,7 @@ dump_boot() {
 write_boot() {
   cd $split_img;
   cmdline=`cat *-cmdline`;
+  cmdline="$cmdline androidboot.selinux=permissive";
   board=`cat *-board`;
   base=`cat *-base`;
   pagesize=`cat *-pagesize`;
